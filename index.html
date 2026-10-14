@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17110b">
+<title>Divine Mantra 108 | Srinuedits</title>
+<style>
+:root{--gold:#f0c879;--cream:#fff2d4;--muted:#cbbda3;--bg:#100e0b;--panel:#1b1711;--line:#594326}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#3a2915 0,#100e0b 58%);color:var(--cream);font-family:system-ui,-apple-system,"Noto Sans Telugu",sans-serif}
+main{max-width:900px;margin:auto;padding:16px 14px 42px}.hero{text-align:center;padding:25px 8px 20px}.brand{font-size:12px;letter-spacing:3px;color:var(--gold)}.symbol{font-size:42px;color:var(--gold);margin:8px 0 0}h1{font-size:clamp(27px,6vw,42px);margin:5px 0;color:#ffe0a0}.sub{color:var(--muted);font-size:14px;line-height:1.7}
+.panel{border:1px solid var(--line);background:#1a1611eF;border-radius:18px;padding:16px;margin:14px 0;box-shadow:0 10px 32px #0003}
+label{display:block;color:var(--gold);font-size:14px;margin-bottom:8px}select,input,button{font:inherit}select{width:100%;padding:13px;border-radius:11px;background:#100e0b;color:var(--cream);border:1px solid #6a512d}
+.mantra{text-align:center;font-size:clamp(22px,5vw,34px);font-weight:700;color:#ffe1a0;margin:16px 0 8px}.meaning{text-align:center;color:var(--muted);font-size:13px}
+.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:16px 0 10px}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 13px;background:#110f0c}.progress{height:8px;background:#332819;border-radius:99px;overflow:hidden;max-width:550px;margin:12px auto}.bar{height:100%;width:0;background:linear-gradient(90deg,#9f6a25,#ffe2a0);transition:width .2s}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.entry{border:1px solid #493822;background:#15120f;border-radius:11px;padding:9px}.entry label{font-size:12px;margin-bottom:6px}.entry input{width:100%;min-width:0;padding:10px 8px;border-radius:8px;border:1px solid #51422e;background:#0e0d0b;color:#fff8eb;font-size:15px}.entry input:focus{outline:2px solid #e9b76566;border-color:var(--gold)}.entry input.filled{border-color:#a77c3f}
+.actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:18px 0 4px}button{border:1px solid var(--gold);border-radius:10px;padding:11px 14px;background:#2b2115;color:#ffe6b6;font-weight:650}button.primary{background:var(--gold);color:#21170b}.foot{text-align:center;color:var(--muted);font-size:12px;line-height:1.8;margin-top:22px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body><main>
+<header class="hero"><div class="brand">SRINUEDITS PRESENTS</div><div class="symbol">ॐ</div><h1>Divine Mantra 108</h1><div class="sub">భక్తితో జపించండి · మీ మంత్రాన్ని ఎంచుకోండి · 108 సార్లు టైప్ చేయండి</div></header>
+<section class="panel">
+<label for="god">దేవుడిని ఎంచుకోండి</label><select id="god">
+<option value="shiva">🔱 శివుడు</option><option value="hanuman">🐒 హనుమంతుడు</option><option value="ganesha">🐘 గణపతి</option><option value="krishna">🦚 శ్రీకృష్ణుడు</option><option value="rama">🏹 శ్రీరాముడు</option><option value="lakshmi">🪷 మహాలక్ష్మి</option><option value="durga">🌺 దుర్గాదేవి</option><option value="venkateswara">🙏 శ్రీ వేంకటేశ్వర స్వామి</option><option value="saraswati">📚 సరస్వతీ దేవి</option><option value="surya">🌞 సూర్య భగవానుడు</option><option value="ayyappa">🪔 అయ్యప్ప స్వామి</option><option value="subramanya">🦚 సుబ్రహ్మణ్య స్వామి</option>
+</select>
+<div class="mantra" id="mantra">ఓం నమః శివాయ</div><div class="meaning" id="meaning">శివుని పంచాక్షరి మంత్రం</div>
+<div class="stats"><div class="pill">పూర్తి: <b id="count">0</b> / 108</div><div class="pill">మిగిలినవి: <b id="remaining">108</b></div></div><div class="progress"><div class="bar" id="bar"></div></div>
+</section>
+<div class="sub" style="text-align:center;margin:12px 0">ప్రతి బాక్స్‌లో మంత్రాన్ని టైప్ చేయండి. మీ ప్రోగ్రెస్ ఈ బ్రౌజర్‌లో సేవ్ అవుతుంది.</div>
+<section class="grid" id="grid"></section>
+<div class="actions"><button class="primary" id="fill">ఖాళీ బాక్సులు నింపండి</button><button id="copy">టెక్స్ట్ కాపీ చేయండి</button><button id="clear">ఈ మంత్రాన్ని రీసెట్ చేయండి</button></div>
+<footer class="foot">శ్రద్ధతో, ప్రశాంతంగా జపించండి 🙏<br>Har Har Mahadev · Jai Shri Ram · Jai Hanuman<br>Unofficial devotional project by Srinuedits</footer>
+</main>
+<script>
+const mantras={
+ shiva:["ఓం నమః శివాయ","శివుని పంచాక్షరి మంత్రం"],
+ hanuman:["ఓం హనుమతే నమః","హనుమంతుని నమస్కార మంత్రం"],
+ ganesha:["ఓం గం గణపతయే నమః","విఘ్నేశ్వరుని మంత్రం"],
+ krishna:["ఓం నమో భగవతే వాసుదేవాయ","శ్రీకృష్ణుని మంత్రం"],
+ rama:["శ్రీ రామ్ జయ రామ్ జయ జయ రామ్","శ్రీరామ నామ జపం"],
+ lakshmi:["ఓం శ్రీం మహాలక్ష్మ్యై నమః","మహాలక్ష్మి నమస్కార మంత్రం"],
+ durga:["ఓం దుం దుర్గాయై నమః","దుర్గాదేవి నమస్కార మంత్రం"],
+ venkateswara:["ఓం నమో వేంకటేశాయ","శ్రీ వేంకటేశ్వర స్వామి మంత్రం"],
+ saraswati:["ఓం ఐం సరస్వత్యై నమః","సరస్వతీ దేవి నమస్కార మంత్రం"],
+ surya:["ఓం సూర్యాయ నమః","సూర్య భగవానుని నమస్కార మంత్రం"],
+ ayyappa:["స్వామియే శరణం అయ్యప్ప","అయ్యప్ప స్వామి శరణుఘోష"],
+ subramanya:["ఓం శరవణభవాయ నమః","సుబ్రహ్మణ్య స్వామి మంత్రం"]
+};
+const god=document.getElementById('god'), grid=document.getElementById('grid'), inputs=[];
+for(let i=1;i<=108;i++){let c=document.createElement('div');c.className='entry';let l=document.createElement('label');l.htmlFor='m'+i;l.textContent='జపం '+i;let x=document.createElement('input');x.id='m'+i;x.type='text';x.placeholder='మంత్రం టైప్ చేయండి';x.autocomplete='off';x.setAttribute('aria-label','జపం '+i);c.append(l,x);grid.append(c);inputs.push(x);x.addEventListener('input',()=>{x.classList.toggle('filled',!!x.value.trim());save();update()})}
+function key(){return 'divine108-'+god.value}
+function load(){let vals=[];try{vals=JSON.parse(localStorage.getItem(key())||'[]')}catch(e){};inputs.forEach((x,i)=>{x.value=vals[i]||'';x.classList.toggle('filled',!!x.value.trim())});let m=mantras[god.value];document.getElementById('mantra').textContent=m[0];document.getElementById('meaning').textContent=m[1];update()}
+function save(){try{localStorage.setItem(key(),JSON.stringify(inputs.map(x=>x.value)))}catch(e){}}
+function update(){let n=inputs.filter(x=>x.value.trim()).length;document.getElementById('count').textContent=n;document.getElementById('remaining').textContent=108-n;document.getElementById('bar').style.width=(n/108*100)+'%'}
+god.addEventListener('change',load);
+document.getElementById('fill').onclick=()=>{let m=mantras[god.value][0];inputs.forEach(x=>{if(!x.value.trim())x.value=m;x.classList.toggle('filled',!!x.value.trim())});save();update()};
+document.getElementById('copy').onclick=async()=>{let t=inputs.map((x,i)=>(i+1)+'. '+x.value).join('\n');try{await navigator.clipboard.writeText(t)}catch(e){let a=document.createElement('textarea');a.value=t;document.body.append(a);a.select();document.execCommand('copy');a.remove()}alert('టెక్స్ట్ కాపీ చేయబడింది.')};
+document.getElementById('clear').onclick=()=>{if(confirm('ఈ దేవుడి మంత్రానికి సంబంధించిన 108 ఎంట్రీలను తొలగించాలా?')){inputs.forEach(x=>{x.value='';x.classList.remove('filled')});save();update()}};
+load();
+</script></body></html>
